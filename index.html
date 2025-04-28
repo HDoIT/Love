@@ -8,6 +8,25 @@
 <META NAME="Description" CONTENT="">
 <style>
 html, body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(270deg, #000000, #1a1a2e, #16213e, #0f3460);
+  background-size: 800% 800%;
+  animation: gradientBackground 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@keyframes gradientBackground {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+  
+/* html, body {
 height: 100vh;
 padding: 0;
 margin: 0;
@@ -15,7 +34,7 @@ background: #000;
 display: flex;
 align-items: center;
 justify-content: center;
-}
+} */
 canvas {
 position: absolute;
 width: 100%;
@@ -119,6 +138,11 @@ transform: translateY(50px);
 <span>🤍</span>
 </div>
 <script>
+
+context.fillStyle = 'rgba(255, 99, 71, 0.8)';
+context.shadowBlur = 20;
+context.shadowColor = "#ff69b4";
+  
 /*
 * Settings
 */
